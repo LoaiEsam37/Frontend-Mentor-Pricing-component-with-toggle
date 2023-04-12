@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 
 const montserrat = Montserrat({
-  subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+  subsets: ["latin"],
 });
 
 export default function Home() {
