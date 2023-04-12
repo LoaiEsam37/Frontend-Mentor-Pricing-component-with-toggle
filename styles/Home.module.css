@@ -1,10 +1,25 @@
 .main {
   display: flex;
-  margin: 15px;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 430px;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/bg-top.svg");
 }
 
 .header {
@@ -16,7 +31,8 @@
 }
 
 .header h1 {
-  color: #686d83
+  color: #686d83;
+  z-index: 1;
 }
 
 .header div {
@@ -88,6 +104,7 @@ input:checked + .slider::before {
   gap: 30px;
   width: 300px;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .card > h2 {
@@ -113,7 +130,7 @@ input:checked + .slider::before {
   background-image: linear-gradient(-40deg,#6c70de, #a1a5ef);
   color: #fff;
   height: 450px;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -180,7 +197,7 @@ input:checked + .slider::before {
   color: #6a70de;
 }
 
-@media (max-width: 950px) {
+@media screen and (width <= 950px) {
   .cards {
     flex-direction: column;
     gap: 30px;
@@ -190,4 +207,10 @@ input:checked + .slider::before {
     box-shadow: 0 0 100px -20px #ddd8d8;
     height: 450px;
   }
+
+  .main::after {
+      width: 200px;
+      height: 500px;
+  }
+
 }
