@@ -1,9 +1,31 @@
 .main {
   display: flex;
+  margin: 15px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header h1 {
+  color: #686d83
+}
+
+.header div {
+  color: #afb1bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
 }
 
 .switch {
@@ -23,7 +45,7 @@
   position: absolute;
   cursor: pointer;
   inset: 0;
-  background-color: #ccc;
+  background-color: #7c7fe6;
   transition: .4s;
   border-radius: 34px;
 }
@@ -41,11 +63,11 @@
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #c5c8f5;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #c5c8f5;
 }
 
 input:checked + .slider::before {
@@ -64,6 +86,19 @@ input:checked + .slider::before {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  width: 300px;
+}
+
+.card:nth-of-type(1),
+.card:nth-of-type(3) {
+  background-color: #fff;
+  height: 400px;
+}
+
+.card:nth-of-type(2) {
+  background-color: #7d81e4;
+  color: #fff;
+  height: 450px;
 }
 
 .features {
