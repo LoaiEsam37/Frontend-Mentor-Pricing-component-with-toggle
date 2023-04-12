@@ -62,7 +62,7 @@
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:hover + .slider {
   background-color: #c5c8f5;
 }
 
@@ -150,11 +150,11 @@ input:checked + .slider::before {
   padding-bottom: 15px;
   text-align: center;
   width: 250px;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 
 .card .features span:last-child {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .card:nth-child(2) .features span {
@@ -178,4 +178,16 @@ input:checked + .slider::before {
   background-image: none;
   background-color: #fff;
   color: #6a70de;
+}
+
+@media (max-width: 950px) {
+  .cards {
+    flex-direction: column;
+    gap: 30px;
+  } 
+
+  .card {
+    box-shadow: 0 0 100px -20px #ddd8d8;
+    height: 450px;
+  }
 }
