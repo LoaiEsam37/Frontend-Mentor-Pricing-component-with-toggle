@@ -22,6 +22,19 @@
   background-image: url("../public/bg-top.svg");
 }
 
+.main::before {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../public/bg-bottom.svg");
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -211,6 +224,10 @@ input:checked + .slider::before {
   .main::after {
       width: 200px;
       height: 500px;
+  }
+
+  .main::before {
+    display: none;
   }
 
 }
