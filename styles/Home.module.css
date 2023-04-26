@@ -55,6 +55,7 @@
   align-items: center;
   gap: 15px;
   font-weight: 600;
+  z-index: 2;
 }
 
 .switch {
@@ -77,7 +78,6 @@
   background-color: #7c7fe6;
   transition: .4s;
   border-radius: 34px;
-  z-index: 2;
 }
 
 .slider::before {
@@ -225,7 +225,6 @@ input:checked + .slider::before {
   .main::after {
       width: 200px;
       height: 500px;
-    index
   }
 
   .main::before {
